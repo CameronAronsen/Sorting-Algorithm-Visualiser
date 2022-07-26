@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        Sorting Algorithms Visulised
+    </title>
+    <link href="style/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-right">
+            <a href="index.html">Home</a>
+            <div class="dropdown active">
+                <button class="header-button">Simple Algorithms</button>
+                <div class="dropdown-content">
+                    <a href="InsertionSort.html">Insertion Sort</a>
+                    <a href="BubbleSort.html">Bubble Sort</a>
+                    <a href="ShellSort.html">Shell Sort</a>
+                    <a href="SelectionSort.html">Selection Sort</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="header-button">Efficient Algorithms</button>
+                <div class="dropdown-content efficient-list">
+                    <a href="QuickSort.html">Quick Sort</a>
+                    <a href="MergeSort.html">Merge Sort</a>
+                    <a href="HeapSort.html">Heap Sort</a>
+                </div>
+
+            </div>
+    </header>
+    <section class="head">Bubble Sort</section>
+    <p>Best: O(n) comparisons, Average: O(n²) comparisons, Worst: O(n²) comparisons</p>
+    <section class="data-container"></section>
+    <section id="ele"></section>
+    <div class="sliderContainer">
+        <P>Speed Slider</P>
+        Min: 1 <input type="range" min="1" max="10" value="5" id="speedSlider" class="speedSlider">Max: 10
+        <P class="curValue" id="currentSpeed">Current Value: </P>
+    </div>
+    <br><br>
+    <div style="margin: auto; width: fit-content;">
+        Num of Bars <input type="number" id="num" class="numOfBars" value="20">
+
+        <button class="btn1" onclick="generatebars(document.getElementById('num').value)" id="Button1">Generate New Array</button>
+        <br><br><br>
+
+        <button class="btn2" onclick="StartSort(500 - ((document.getElementById('speedSlider').value) * 45)),disable()" id="Button2">Bubble Sort</button>
+        <br>
+        <button class="btn3" onclick="Stop(), Enable()" id="Button3">Stop</button>
+    </div>
+</body>
+
+<script src="script/BubbleSort.js"></script>
+
+</html>
